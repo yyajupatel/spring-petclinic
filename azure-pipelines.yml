@@ -47,16 +47,16 @@ stages:
   dependsOn: Build
   condition: succeeded()
   jobs:
-  - deployment: VMDeploy
-    displayName: web
-    pool:
-      vmImage: 'Ubuntu-16.04'
+    - deployment: VmDeploy
+      displayName: web
+      pool:
+       vmImage: 'Ubuntu-16.04'
       environment:
-      name: LinumVM
-      resourceType: VirtualMachine
+       name: LinumVM
+       resourceType: VirtualMachine
+       tags: web
       strategy:
-        runOnce:
-          deploy:
+       runOnce:
+         deploy:
            steps:
-            - script: echo my first deployment
- 
+             - script: echo my first deployment
