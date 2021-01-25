@@ -48,8 +48,9 @@ stages:
     pool:
       vmImage: 'Ubuntu-16.04'
     environment:
-      name: linuxVM
+      name: LinumVM
       resourceType: VirtualMachine
+      tags: web
     strategy:
       runOnce:
         deploy:
