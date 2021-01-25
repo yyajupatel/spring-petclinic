@@ -48,7 +48,7 @@ jobs:
   pool:
     vmImage: 'Ubuntu-16.04'
   environment:
-    name: 
+    name: linuxVM
     resourceType: VirtualMachine
   strategy:
     runOnce:
